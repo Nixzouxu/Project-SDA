@@ -51,24 +51,38 @@ void dequeue(Queue* queue, Stack* stack){
     printf("⚙️ Nasabah %s dengan layanan %s telah diproses. ✅\n", temp->nama, temp->layanan);
 }
 
-// Fungsi untuk menampilkan antrian saat ini
-void displayQueue(Queue* q) {
-    if (q->front == NULL) {
-        printf("Antrian kosong.\n");
+// Fungsi Untuk menampilkan Antrian 
+void displayQueue(Queue* queue){
+    if(queue->front == NULL){
+        printf("\n");
+        printf("╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\n");
+        printf("┃    📭  ANTRIAN KOSONG!    ┃\n");
+        printf("┃  Tidak ada nasabah saat ini.┃\n");
+        printf("╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\n\n");
         return;
     }
-
-    Nasabah* current = q->front;
-    printf("\n+------+----------------+------------------+\n");
-    printf("| No.  | Nama Nasabah   | Layanan          |\n");
-    printf("+------+----------------+------------------+\n");
+    Nasabah* current = queue->front;
+    printf("\n");
+    
+    printf("╔════════════════════════════════════════════╗\n");
+    printf("║         🌟  DAFTAR ANTRIAN NASABAH  🌟      ║\n");
+    printf("╠════╦════════════════╦══════════════════════╣\n");
+    printf("║ 🔢 │     🏷 Nama     │       🏦 Layanan     ║\n");
+    printf("╠════╬════════════════╬══════════════════════╣\n"); 
 
     int count = 1;
     while (current != NULL) {
-        printf("| %-4d | %-14s | %-16s |\n", count, current->nama, current->layanan);
+        /*mencetak data antrian dalam format tabel yang rapi
+            %-2d : menampilkan angka dengan lebar minimal 2 karakter dan rata kiri
+            %-14s : menampilkan nama nasabah dengan lebar minimal 14 karakter dan rata kiri
+            %-18s : menampilkan layanan dengan lebar minimal 18 karakter dan rata kiri*/
+        printf("║ %-2d │ %-14s │ %-18s ║\n", count, current->nama, current->layanan);
         current = current->next;
         count++;
     }
-    printf("+------+----------------+------------------+\n");
-    printf("Total nasabah dalam antrian: %d\n", count - 1);
+
+    printf("╚════╩════════════════╩══════════════════════╝\n");
+    printf("📢 Jumlah nasabah dalam antrian: %d\n", count - 1);
+    printf("⌛ Mohon bersabar, layanan segera diproses... ✅\n\n");
+
 }
