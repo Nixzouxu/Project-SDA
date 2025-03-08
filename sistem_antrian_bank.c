@@ -30,3 +30,23 @@ void enqueue(Queue* queue, char nama[], char layanan[]){
     }
   printf("✅ Nasabah %s berhasil ditambahkan ke antrian dengan layanan %s. \n", nama, layanan);
 }
+
+// Fungsi untuk memproses nasabah di dalam antrian (Dequeue)
+void dequeue(Queue* queue, Stack* stack){
+    if(queue->front == NULL){
+        printf("Antrian Kosong, tidak ada nasabah yang diproses. \n");
+        return;
+    }
+    Nasabah* temp = queue->front;
+    queue->front = queue->front->next;
+
+    if(queue->front == NULL){ // jika antrian kosong setelah dequeue
+        queue->rear = NULL;
+    }
+
+    // Simpan Nasabah yang diproses ke stack riwayat transaksi
+    temp->next = stack->top;
+    stack->top = temp;
+
+    printf("⚙️ Nasabah %s dengan layanan %s telah diproses. ✅\n", temp->nama, temp->layanan);
+}
