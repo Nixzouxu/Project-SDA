@@ -8,6 +8,13 @@ Queue* createQueue() {
     return queue;
 }
 
+// Fungsi untuk membuat Stack baru
+Stack* createStack() {
+    Stack* stack = (Stack*)malloc(sizeof(Stack));
+    stack->top = NULL;
+    return stack;
+}
+
 // fungsi untuk menambahkan nasabah ke dalam antrian (Enqueue)
 void enqueue(Queue* queue, char nama[], char layanan[]){
     Nasabah* newNasabah = (Nasabah*)malloc(sizeof(Nasabah));
