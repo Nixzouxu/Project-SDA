@@ -50,3 +50,25 @@ void dequeue(Queue* queue, Stack* stack){
 
     printf("⚙️ Nasabah %s dengan layanan %s telah diproses. ✅\n", temp->nama, temp->layanan);
 }
+
+// Fungsi untuk menampilkan antrian saat ini
+void displayQueue(Queue* q) {
+    if (q->front == NULL) {
+        printf("Antrian kosong.\n");
+        return;
+    }
+
+    Nasabah* current = q->front;
+    printf("\n+------+----------------+------------------+\n");
+    printf("| No.  | Nama Nasabah   | Layanan          |\n");
+    printf("+------+----------------+------------------+\n");
+
+    int count = 1;
+    while (current != NULL) {
+        printf("| %-4d | %-14s | %-16s |\n", count, current->nama, current->layanan);
+        current = current->next;
+        count++;
+    }
+    printf("+------+----------------+------------------+\n");
+    printf("Total nasabah dalam antrian: %d\n", count - 1);
+}
