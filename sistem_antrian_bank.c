@@ -51,6 +51,21 @@ void dequeue(Queue* queue, Stack* stack){
     printf("⚙️ Nasabah %s dengan layanan %s telah diproses. ✅\n", temp->nama, temp->layanan);
 }
 
+// Efek Loading dengan animasi ASCII
+void loadingEffect(){
+    printf("\n");
+    printf(BLUE "⏳ Memuat data antrian" RESET);
+    for (int i = 0; i < 3; i++) {
+        usleep(500000); // delay 0.5 detik
+        printf(".");
+        fflush(stdout);
+    }
+    usleep(500000); // delay 0.5 detik
+    printf(GREEN " ✅ Selesai!\n" RESET);
+    sleep(1);
+}
+
+
 // Fungsi Untuk menampilkan Antrian 
 void displayQueue(Queue* queue){
     if(queue->front == NULL){
