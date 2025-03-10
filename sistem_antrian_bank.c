@@ -209,5 +209,80 @@ void freeStack(Stack* s) {
     }
     free(s);
 }
+// Fungsi tampilan menu utama
+void displayMenu(Queue* q, Stack* s) {
+    int pilihan;
+    char nama[50];
+    char layanan[50];
 
+
+    while (1) {
+        clearScreen();
+        printf(BOLD YELLOW "+---------------------------------------+\n" RESET);
+        printf("|        SISTEM ANTREAN BANK            |\n");
+        printf(BOLD YELLOW "+---------------------------------------+\n" RESET);
+        printf("| 1. Tambah Nasabah ke Antrian          |\n");
+        printf("| 2. Proses Nasabah                     |\n");
+        printf("| 3. Tampilkan Antrian Saat Ini         |\n");
+        printf("| 4. Tampilkan Riwayat Transaksi        |\n");
+        printf("| 5. Batalkan Transaksi Terakhir (Undo) |\n");
+        printf("| 6. Keluar                             |\n");
+        printf(BOLD YELLOW "+---------------------------------------+\n" RESET);
+        printf("Pilihan Anda: ");
+        scanf("%d", &pilihan);
+
+        switch (pilihan) {
+            case 1:
+                printf(" 👤 Masukkan nama nasabah: ");
+                scanf("%s", nama);
+                printf(" 📌Pilih jenis layanan:\n");
+                printf("  1. Setor Tunai\n");
+                printf("  2. Tarik Tunai\n");
+                printf("  3. Pembukaan Rekening\n");
+                printf(" 💡 Pilihan (1-3): ");
+                int pilihanLayanan;
+                scanf("%d", &pilihanLayanan);
+                switch (pilihanLayanan) {
+                    case 1:
+                        strcpy(layanan, "Setor Tunai");
+                        break;
+                    case 2:
+                        strcpy(layanan, "Tarik Tunai");
+                        break;
+                    case 3:
+                        strcpy(layanan, "Pembukaan Rekening");
+                        break;
+                    default:
+                        printf("%sPilihan tidak valid!%s\n", RED, RESET);
+                        continue;
+                }
+                enqueue(q, nama, layanan);
+                break;
+            case 2:
+                dequeue(q, s);
+                break;
+            case 3:
+                displayQueue(q);
+                break;
+            case 4:
+                displayStack(s);
+                break;
+            case 5:
+                undo(q, s);
+                break;
+            case 6:
+                printf("Terima kasih! Program berakhir.\n");
+                // Membersihkan memory sebelum keluar
+                Sleep(1000);
+                freeQueue(q);
+                freeStack(s);
+                exit(0);
+            default:
+                printf("%sPilihan tidak valid! Silakan coba lagi.%s\n", RED, RESET);
+        }
+        printf("\nTekan Enter untuk melanjutkan...");
+        getchar(); // Mengambil karakter newline yang tersisa
+        getchar(); // Menunggu input dari pengguna
+    }
+}
 
