@@ -171,8 +171,8 @@ void displayStack(Stack* s) {
     Nasabah* current = s->top;
     printf("\n");
     printf(BOLD BLUE "+---------------------------------------+\n" RESET);
-    printf(BOLD BLUE "|       RIWAYAT TRANSAKSI NASABAH      |\n" RESET);
-    printf(BOLD BLUE "+------+----------------+------------------+\n" RESET);
+    printf(BOLD BLUE "|       RIWAYAT TRANSAKSI NASABAH       |\n" RESET);
+    printf(BOLD BLUE "+------+----------------+---------------+\n" RESET);
     printf("| No.  | Nama Nasabah   | Layanan          |\n");
     printf(BOLD BLUE "+------+----------------+------------------+\n" RESET);
 
