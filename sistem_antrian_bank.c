@@ -136,6 +136,54 @@ void undo(Queue* q, Stack* s) {
     printf("✓ Transaksi %s dengan layanan %s telah dibatalkan dan dikembalikan ke antrian.\n", temp->nama, temp->layanan);
 }
 
+void displayQueue(Queue* q) {
+    if (q->front == NULL) {
+        printf("%s⚠️ Antrian kosong.%s\n", RED, RESET);
+        return;
+    }
+
+    Nasabah* current = q->front;
+    printf("\n");
+    printf(BOLD BLUE "+---------------------------------------+\n" RESET);
+    printf(BOLD BLUE "|          ANTRIAN NASABAH            |\n" RESET);
+    printf(BOLD BLUE "+------+----------------+------------------+\n" RESET);
+    printf("| No.  | Nama Nasabah   | Layanan          |\n");
+    printf(BOLD BLUE "+------+----------------+------------------+\n" RESET);
+
+    int count = 1;
+    while (current != NULL) {
+        printf("| %-4d | %-14s | %-16s |\n", count, current->nama, current->layanan);
+        current = current->next;
+        count++;
+    }
+    printf(BOLD BLUE "+------+----------------+------------------+\n" RESET);
+    printf("Total nasabah dalam antrian: %d\n", count - 1);
+}
+
+void displayStack(Stack* s) {
+    if (s->top == NULL) {
+        printf("%sRiwayat transaksi kosong.%s\n", RED, RESET);
+        return;
+    }
+
+    Nasabah* current = s->top;
+    printf("\n");
+    printf(BOLD BLUE "+---------------------------------------+\n" RESET);
+    printf(BOLD BLUE "|       RIWAYAT TRANSAKSI NASABAH      |\n" RESET);
+    printf(BOLD BLUE "+------+----------------+------------------+\n" RESET);
+    printf("| No.  | Nama Nasabah   | Layanan          |\n");
+    printf(BOLD BLUE "+------+----------------+------------------+\n" RESET);
+
+    int count = 1;
+    while (current != NULL) {
+        printf("| %-4d | %-14s | %-16s |\n", count, current->nama, current->layanan);
+        current = current->next;
+        count++;
+    }
+    printf(BOLD BLUE "+------+----------------+------------------+\n" RESET);
+    printf("Total transaksi dalam riwayat: %d\n", count - 1);
+}
+
 // Fungsi untuk membersihkan semua memory yang dialokasikan dalam Queue
 void freeQueue(Queue* q) {
     Nasabah* current = q->front;
