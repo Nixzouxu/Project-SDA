@@ -136,6 +136,7 @@ void undo(Queue* q, Stack* s) {
     printf("✓ Transaksi %s dengan layanan %s telah dibatalkan dan dikembalikan ke antrian.\n", temp->nama, temp->layanan);
 }
 
+//fungsi untuk menampilkan antrian pada saat ini
 void displayQueue(Queue* q) {
     if (q->front == NULL) {
         printf("%s⚠️ Antrian kosong.%s\n", RED, RESET);
@@ -160,6 +161,7 @@ void displayQueue(Queue* q) {
     printf("Total nasabah dalam antrian: %d\n", count - 1);
 }
 
+// fungsi untuk menampilkan riwayat transaksi
 void displayStack(Stack* s) {
     if (s->top == NULL) {
         printf("%sRiwayat transaksi kosong.%s\n", RED, RESET);
