@@ -3,7 +3,7 @@
 #include <string.h>
 #include <Windows.h>
 
-// ANSI Escape Codes untuk warna terminal (jika didukung)
+// ANSI Escape Codes untuk warna terminal 
 #define RESET   "\033[0m"
 #define CYAN    "\033[96m"
 #define GREEN   "\033[92m"
