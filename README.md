@@ -1,7 +1,7 @@
 # Project STRUKTUR DATA DAN ALGORITMA
 Sistem Antrian Bank
 
-Nama Dan NPM
+NAMA dan NPM
 Muhammad Hafidz (2408107010052)
 Khairan Rafi (2408107010039)
 Syakila Naira (2408107010034)
