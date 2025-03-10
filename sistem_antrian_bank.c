@@ -136,4 +136,28 @@ void undo(Queue* q, Stack* s) {
     printf("✓ Transaksi %s dengan layanan %s telah dibatalkan dan dikembalikan ke antrian.\n", temp->nama, temp->layanan);
 }
 
+// Fungsi untuk membersihkan semua memory yang dialokasikan dalam Queue
+void freeQueue(Queue* q) {
+    Nasabah* current = q->front;
+    Nasabah* next;
+    while (current != NULL) {
+        next = current->next;
+        free(current);
+        current = next;
+    }
+    free(q);
+}
+
+// Fungsi untuk membersihkan semua memory yang dialokasikan dalam Stack
+void freeStack(Stack* s) {
+    Nasabah* current = s->top;
+    Nasabah* next;
+    while (current != NULL) {
+        next = current->next;
+        free(current);
+        current = next;
+    }
+    free(s);
+}
+
 
