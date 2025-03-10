@@ -286,3 +286,17 @@ void displayMenu(Queue* q, Stack* s) {
     }
 }
 
+// Fungsi utama
+int main() {
+
+    Queue* antrian = createQueue(); // Inisialisasi antrian
+    Stack* riwayat = createStack(); // Inisialisasi stack riwayat
+
+    // Menampilkan menu utama
+    futuristicLoading();
+    displayMenu(antrian, riwayat);
+
+    return 0;
+}
+
+
