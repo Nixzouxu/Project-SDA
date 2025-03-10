@@ -114,4 +114,26 @@ void dequeue(Queue* queue, Stack* stack) {
     printf("⚙️ %sNasabah %s dengan layanan %s telah diproses ✅.%s\n", GREEN, temp->nama, temp->layanan, RESET);
 }
 
+// Fungsi untuk membatalkan transaksi terakhir (Undo)
+void undo(Queue* q, Stack* s) {
+    if (s->top == NULL) {
+        printf("Tidak ada transaksi untuk dibatalkan.\n");
+        return;
+    }
+
+    Nasabah* temp = s->top;
+    s->top = s->top->next;
+
+    // Kembalikan nasabah ke antrian
+    temp->next = NULL;
+    if (q->rear == NULL) { // Jika antrian kosong
+        q->front = q->rear = temp;
+    } else {
+        q->rear->next = temp;
+        q->rear = temp;
+    }
+
+    printf("✓ Transaksi %s dengan layanan %s telah dibatalkan dan dikembalikan ke antrian.\n", temp->nama, temp->layanan);
+}
+
 
