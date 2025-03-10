@@ -75,4 +75,43 @@ Stack* createStack() {
     return stack;
 }
 
+// Fungsi untuk menambahkan nasabah ke antrian (Enqueue)
+void enqueue(Queue* queue, char nama[], char layanan[]) {
+    Nasabah* newNasabah = (Nasabah*)malloc(sizeof(Nasabah));
+    strcpy(newNasabah->nama, nama);
+    strcpy(newNasabah->layanan, layanan);
+    newNasabah->next = NULL;
+
+    if (queue->rear == NULL) { // Jika antrian kosong
+        queue->front = queue->rear = newNasabah;
+    } else {
+        queue->rear->next = newNasabah;
+        queue->rear = newNasabah;
+    }
+    printf("✅ %sNasabah %s berhasil ditambahkan ke antrian dengan layanan %s.%s\n", GREEN, nama, layanan, RESET);
+}
+
+// Fungsi untuk memproses nasabah dari antrian (Dequeue)
+void dequeue(Queue* queue, Stack* stack) {
+    if (queue->front == NULL) {
+        printf("%s⚠️ Antrian kosong, tidak ada nasabah untuk diproses.%s\n", RED, RESET);
+        return;
+    }
+
+    Nasabah* temp = queue->front;
+    queue->front = queue->front->next;
+
+    if (queue->front == NULL) { // Jika antrian kosong setelah dequeue
+        queue->rear = NULL;
+    }
+
+    // Simpan nasabah yang diproses ke stack riwayat transaksi
+    temp->next = stack->top;
+    stack->top = temp;
+
+    printf("\n⚙️ Memproses transaksi %s%s%s untuk layanan %s%s%s...\n", CYAN, temp->nama, RESET, BLUE, temp->layanan, RESET);
+    Sleep(1000);  // Delay 1 detik untuk simulasi proses
+    printf("⚙️ %sNasabah %s dengan layanan %s telah diproses ✅.%s\n", GREEN, temp->nama, temp->layanan, RESET);
+}
+
 
