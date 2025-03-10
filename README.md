@@ -1,2 +1,3 @@
-# Project SDA
- Sistem Antrean Bank 
+# Project STRUKTUR DATA DAN ALGORITMA
+Sistem Antrian Bank
+
