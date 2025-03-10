@@ -24,6 +24,25 @@ void clearScreen() {
         system("clear"); // Untuk Linux/MacOS
     #endif
 }
+
+// Fungsi untuk efek loading
+void futuristicLoading(){
+    const char* animation[] = {"⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"};
+    int numFrames = sizeof(animation) / sizeof(animation[0]);
+
+    printf(BOLD CYAN "\n ⏳ initializing System... ⏳\n" RESET);
+    Sleep(500);
+
+    for (int i = 0; i < 30; i++)
+    {
+        printf(BOLD GREEN "\r[ %s ] Loading...%d%%" RESET, animation[i % numFrames], (i + 1) * 3);
+        fflush(stdout);
+        Sleep(100);
+    }
+    printf(BOLD NEON "\r[ ✔ ] System Ready!          \n" RESET);
+    
+}
+
 // Struct untuk data nasabah
 typedef struct Nasabah {
     char nama[50];
@@ -41,5 +60,19 @@ typedef struct {
 typedef struct {
     Nasabah* top; // Elemen Teratas stack
 } Stack;
+
+// Fungsi untuk membuat Queue baru
+Queue* createQueue() {
+    Queue* queue = (Queue*)malloc(sizeof(Queue));
+    queue->front = queue->rear = NULL;
+    return queue;
+}
+
+// Fungsi untuk membuat Stack baru
+Stack* createStack() {
+    Stack* stack = (Stack*)malloc(sizeof(Stack));
+    stack->top = NULL;
+    return stack;
+}
 
 
