@@ -2,11 +2,18 @@
 Sistem Antrian Bank
 
 NAMA dan NPM
+
+
 Muhammad Hafidz (2408107010052)
+
 Khairan Rafi (2408107010039)
-Syakila Naira (2408107010034)
+
+Syakila Naira (2408107010034)  
+
 Yogi Wanda Putra (2408107010056)
+
 Muhammad Sulthan Shadiq (2408107010104) 
+
 
 Deskripsi Singkat Program
 Program ini adalah simulasi sistem antrian bank berbasis teks yang memungkinkan user untuk:
@@ -29,6 +36,7 @@ Cara Kompilasi :
 dan Program akan berjalan
 
 Penjelasan Struktur Program dan Implementasi Struktur Data.
+
 1) Fungsi clearScrean()
    
    	-fungsi ini digunakan untuk membersihkan layar terminal. Pada Windows, perintah cls digunakan, sedangkan pada Linux/MacOS, perintah clear digunakan.
