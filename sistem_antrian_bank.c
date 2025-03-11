@@ -174,7 +174,7 @@ void displayStack(Stack* s) {
     printf(BOLD BLUE "|       RIWAYAT TRANSAKSI NASABAH       |\n" RESET);
     printf(BOLD BLUE "+------+----------------+---------------+\n" RESET);
     printf("| No.  | Nama Nasabah   | Layanan          |\n");
-    printf(BOLD BLUE "+------+----------------+------------------+\n" RESET);
+    printf(BOLD BLUE "+------+----------------+---------------+\n" RESET);
 
     int count = 1;
     while (current != NULL) {
