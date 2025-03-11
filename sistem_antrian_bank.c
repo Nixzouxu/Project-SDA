@@ -157,7 +157,7 @@ void displayQueue(Queue* q) {
         current = current->next;
         count++;
     }
-    printf(BOLD BLUE "+------+----------------+--------------------+\n" RESET);
+    printf(BOLD BLUE "+------+----------------+----------------------+\n" RESET);
     printf("Total nasabah dalam antrian: %d\n", count - 1);
 }
 
