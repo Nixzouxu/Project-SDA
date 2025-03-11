@@ -145,11 +145,11 @@ void displayQueue(Queue* q) {
 
     Nasabah* current = q->front;
     printf("\n");
-    printf(BOLD BLUE "+------------------------------------------+\n" RESET);
-    printf(BOLD BLUE "|          ANTRIAN NASABAH                 |\n" RESET);
-    printf(BOLD BLUE "+------+----------------+------------------+\n" RESET);
+    printf(BOLD BLUE "+--------------------------------------------+\n" RESET);
+    printf(BOLD BLUE "|          ANTRIAN NASABAH                   |\n" RESET);
+    printf(BOLD BLUE "+------+----------------+--------------------+\n" RESET);
     printf("| No.  | Nama Nasabah   | Layanan          |\n");
-    printf(BOLD BLUE "+------+----------------+------------------+\n" RESET);
+    printf(BOLD BLUE "+------+----------------+--------------------+\n" RESET);
 
     int count = 1;
     while (current != NULL) {
