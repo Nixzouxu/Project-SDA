@@ -63,7 +63,6 @@ Penjelasan Struktur Program dan Implementasi Struktur Data.
   
   	 digunakan untuk menyimpan daftar nasabah yang sedang mengantri. Implementasi ini menggunakan linked list dengan pointer front (elemen pertama dalam antrian) dan rear (elemen terakhir dalam antrian).Struktur ini 	 mengimplementasikan antrian menggunakan linked list. Memiliki dua pointer:
 
-
    1) front: Menunjuk ke elemen depan antrian.
    
    2)  rear: Menunjuk ke elemen belakang antrian.
