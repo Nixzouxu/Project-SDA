@@ -144,20 +144,20 @@ void displayQueue(Queue* q) {
     }
 
     Nasabah* current = q->front;
-    printf("\n");
-    printf(BOLD BLUE "+--------------------------------------------+\n" RESET);
-    printf(BOLD BLUE "|          ANTRIAN NASABAH                   |\n" RESET);
-    printf(BOLD BLUE "+------+----------------+--------------------+\n" RESET);
-    printf("| No.  | Nama Nasabah   | Layanan            |\n");
-    printf(BOLD BLUE "+------+----------------+--------------------+\n" RESET);
+     printf("\n");
+    printf(BOLD BLUE "+------+----------------+----------------------+\n" RESET);
+    printf(BOLD BLUE "|          ANTRIAN NASABAH                     |\n" RESET);
+    printf(BOLD BLUE "+------+----------------+----------------------+\n" RESET);
+    printf("| No.  | Nama Nasabah   | Layanan              |\n");
+    printf(BOLD BLUE "+------+----------------+----------------------+\n" RESET);
 
     int count = 1;
     while (current != NULL) {
-        printf("| %-4d | %-14s | %-16s |\n", count, current->nama, current->layanan);
+        printf("| %-4d | %-14s | %-20s |\n", count, current->nama, current->layanan);
         current = current->next;
         count++;
     }
-    printf(BOLD BLUE "+------+----------------+--------------------+\n" RESET);
+    printf(BOLD BLUE "+------+----------------+----------------------+\n" RESET);
     printf("Total nasabah dalam antrian: %d\n", count - 1);
 }
 
@@ -170,20 +170,20 @@ void displayStack(Stack* s) {
 
     Nasabah* current = s->top;
     printf("\n");
-    printf(BOLD BLUE "+---------------------------------------+\n" RESET);
-    printf(BOLD BLUE "|       RIWAYAT TRANSAKSI NASABAH       |\n" RESET);
-    printf(BOLD BLUE "+------+----------------+---------------+\n" RESET);
-    printf("| No.  | Nama Nasabah   | Layanan          |\n");
-    printf(BOLD BLUE "+------+----------------+---------------+\n" RESET);
+    printf(BOLD BLUE "+------+----------------+----------------------+\n" RESET);
+    printf(BOLD BLUE "|          RIWAYAT TRANSAKSI NASABAH           |\n" RESET);
+    printf(BOLD BLUE "+------+----------------+----------------------+\n" RESET);
+    printf("| No.  | Nama Nasabah   | Layanan              |\n");
+    printf(BOLD BLUE "+------+----------------+----------------------+\n" RESET);
 
     int count = 1;
     while (current != NULL) {
-        printf("| %-4d | %-14s | %-16s |\n", count, current->nama, current->layanan);
+        printf("| %-4d | %-14s | %-20s |\n", count, current->nama, current->layanan);
         current = current->next;
         count++;
     }
-    printf(BOLD BLUE "+------+----------------+------------------+\n" RESET);
-    printf("Total transaksi dalam riwayat: %d\n", count - 1);
+    printf(BOLD BLUE "+------+----------------+----------------------+\n" RESET);
+    printf("Total nasabah dalam antrian: %d\n", count - 1);
 }
 
 // Fungsi untuk membersihkan semua memory yang dialokasikan dalam Queue
@@ -243,11 +243,11 @@ void displayMenu(Queue* q, Stack* s) {
                 int pilihanLayanan;
                 scanf("%d", &pilihanLayanan);
                 switch (pilihanLayanan) {
-                    case 1:
-                        strcpy(layanan, "Setor Tunai");
+                   case 1:
+                        strcpy(layanan, "Setor Tunai       ");
                         break;
                     case 2:
-                        strcpy(layanan, "Tarik Tunai");
+                        strcpy(layanan, "Tarik Tunai       ");
                         break;
                     case 3:
                         strcpy(layanan, "Pembukaan Rekening");
