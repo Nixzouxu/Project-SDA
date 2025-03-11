@@ -146,21 +146,32 @@ Penjelasan Struktur Program dan Implementasi Struktur Data.
 Hasil Eksekusi Program
 
 menu utama
+
 ![alt text](https://github.com/Nixzouxu/Project-SDA/blob/main/hasil%20eksekusi/utama.jpg?raw=true)  
 
+
 menambah nasabah
+
 ![alt text](https://github.com/Nixzouxu/Project-SDA/blob/main/hasil%20eksekusi/menambah%20nasabah.jpg?raw=true)
 
+
 memproses nasabah
+
 ![alt text](https://github.com/Nixzouxu/Project-SDA/blob/main/hasil%20eksekusi/memperoses%20nasabah.jpg?raw=true)
 
+
 menampilkan antrian
+
 ![alt text](https://github.com/Nixzouxu/Project-SDA/blob/main/hasil%20eksekusi/menampilkan%20antrian.jpg?raw=true)
 
+
 menampilkan riwayat transaksi
+
 ![alt text](https://github.com/Nixzouxu/Project-SDA/blob/main/hasil%20eksekusi/menampilkan%20riwayat%20transaksi.jpg?raw=true)
 
+
 membatalkan transaksi terakhir
+
 ![alt text](https://github.com/Nixzouxu/Project-SDA/blob/main/hasil%20eksekusi/membatalkan%20transaksi%20terakhir.jpg?raw=true)
 
 
