@@ -159,6 +159,8 @@ menampilkan riwayat transaksi
 membatalkan transaksi terakhir
 
 
+
+
 Kendala dan Solusi Selama Pengembangan
 
 
