@@ -148,7 +148,7 @@ void displayQueue(Queue* q) {
     printf(BOLD BLUE "+--------------------------------------------+\n" RESET);
     printf(BOLD BLUE "|          ANTRIAN NASABAH                   |\n" RESET);
     printf(BOLD BLUE "+------+----------------+--------------------+\n" RESET);
-    printf("| No.  | Nama Nasabah   | Layanan          |\n");
+    printf("| No.  | Nama Nasabah   | Layanan            |\n");
     printf(BOLD BLUE "+------+----------------+--------------------+\n" RESET);
 
     int count = 1;
