@@ -55,7 +55,7 @@ Penjelasan Struktur Program dan Implementasi Struktur Data.
    
    	-Menyimpan nama nasabah.
    
-   	-layanaMenyimpan jenis layanan yang dipilih nasabah.
+   	-Menyimpan jenis layanan yang dipilih nasabah.
    
    	-nextPointer ke nasabah berikutnya dalam antrian atau stack.
 
@@ -63,9 +63,9 @@ Penjelasan Struktur Program dan Implementasi Struktur Data.
   
   	 digunakan untuk menyimpan daftar nasabah yang sedang mengantri. Implementasi ini menggunakan linked list dengan pointer front (elemen pertama dalam antrian) dan rear (elemen terakhir dalam antrian).Struktur ini 	 mengimplementasikan antrian menggunakan linked list. Memiliki dua pointer:
 
-   1) front: Menunjuk ke elemen depan antrian.
+   	- front: Menunjuk ke elemen depan antrian.
    
-   2)  rear: Menunjuk ke elemen belakang antrian.
+	- rear: Menunjuk ke elemen belakang antrian.
 
 6) Struct Stack (Riwayat Transaksi)
    	Stack digunakan untuk menyimpan transaksi yang telah diproses. Struktur stack diimplementasikan dengan menggunakan linked list, di mana pointer top menunjuk ke elemen terakhir yang dimasukkan. 
