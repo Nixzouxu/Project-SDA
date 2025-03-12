@@ -35,6 +35,15 @@ Cara Kompilasi :
 3) lalu masukkan command " ./sistem_antrian_bank " dan tekan ENTER
 dan Program akan berjalan
 
+Cara Berjalannya Program
+* Setelah Di Compile Program akan memunculkan sebuah loading, dan kita hanya perlu menunggu nya sesaat dan Program akan langsung masuk ke menu utama
+* Jika memilih menu  1 maka akan  meminta user untuk memasukkan nama nasabah dan memilih jenis layanan yang ingin user ambil, setelah itu nasabah tersebut akan masuk ke dalam antrian Pemrosesan nasabah
+* untuk memproses nasabah pilih menu 2 dan tunggu beberapa saat sampai nasabah tersebut selesai di proses
+* jika memilih menu 3 dan nasabah selesai diproses maka akan memunculkan peringatan bahwa antrian kosong, namun jika ada nasabah yang belum di proses maka menu tersebut akan menampilkan tampilan antarmuka dari antrian tersebut
+* jika memilih menu 4 maka akan menampilkan riwayat transaksi nasabah yang sudah di proses, namun jika ada nasabah yang belum di proses maka riwayat tersebut akan menampilkan tampilan antarmuka yang menyatakan bahwa riwayat kosong
+* jika memilih menu 5 maka akan men Undo atau membatalkan riwayat transaksi nasabah sebelumnya
+* dan terakhir jika memilih menu 6 maka program selesai dan program akan membebaskan semua memory agar tidak terjadi memory leaks
+
 Penjelasan Struktur Program dan Implementasi Struktur Data.
 
 1) Fungsi clearScrean()
